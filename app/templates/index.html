@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super()}}
+{% for msg in get_flashed_messages(True) %}
+<div class="flash">{{msg}}</div>
+{% endfor %}
+
+<div class="image_parent">
+    <div class="image_sibling">
+        <p class="span_index">Главная страница</p>
+        <img src="../static/images/sovkombank.png" alt="Главная страница">
+    </div>
+    
+</div>
+
+    
+{% endblock %}
+   

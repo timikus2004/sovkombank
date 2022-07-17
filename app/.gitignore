@@ -1,0 +1,4 @@
+.env
+/venvSovkombank
+/_pycache__
+/app/__pycache__

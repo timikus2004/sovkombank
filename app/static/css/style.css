@@ -1,0 +1,26 @@
+h1 {
+    border: 2px #eee solid;
+    color: brown;
+    text-align: center;
+    padding: 10px;
+}
+
+div.login_parent {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top : 0%;
+    left: 0%;
+    overflow: auto;
+}
+
+div.login_child {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top : 50%;
+    left: 50%;
+    margin: -125px 0 0 -125px;
+}
+
+

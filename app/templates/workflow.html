@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super()}}
+{% for msg in get_flashed_messages(True) %}
+<div class="flash">{{msg}}</div>
+{% endfor %}
+
+    <p class="span_index"> Рабочий стол пользователя {{username}} </p>
+    
+{% endblock %}
+   
