@@ -1,12 +1,17 @@
-from tabnanny import check
-from flask import Flask, render_template, request,url_for,redirect, g, flash, current_app, session
-from config import host, user, password, db_name
-import psycopg2
+import datetime as dt
 from dotenv import load_dotenv
+
+
+from flask import Flask, render_template, request, url_for,redirect, g, flash, current_app, session
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
-from user_login import UserLogin
-from Fdatabase import Fdatabase
+import psycopg2
 from werkzeug.security import generate_password_hash, check_password_hash
+
+
+from config import host, user, password, db_name
+from Fdatabase import Fdatabase
+from user_login import UserLogin
+
 load_dotenv()
 
 app = Flask(__name__)
