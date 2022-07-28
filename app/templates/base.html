@@ -9,9 +9,25 @@
   </head>
   <body>
         <div class="navbar">
-                <p><a href="{{ url_for('login')}}">Login</a></p>
-                <p><a href="{{ url_for('logout')}}">Logout</a></p>
-                <p><a href="{{ url_for('workflow')}}">Workflow</a></p>
+                <a href="{{ url_for('login')}}">Login</a>
+                <a href="{{ url_for('logout')}}">Logout</a>
+                <a href="{{ url_for('choose')}}">Choose Operator</a>
+        </div>
+        <div class="flash_msgs">
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <ul>
+                {% for msg in messages%}
+                  <li>{{msg}}</li>
+                {% endfor %}
+                </ul>
+              {% endif %}
+            {% endwith %}
+        </div>
+        <div class="error">
+          {% if error %}
+            <p>{{error}}</p>
+          {% endif %}
         </div>
         <div class= "block">
                 {% block content %}

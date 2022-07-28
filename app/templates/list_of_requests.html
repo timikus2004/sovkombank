@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<p><a href="{{ url_for('choose')}}">Выбрать другого оператора</a></p>
+
+
+
+<div class="requests_container">
+    <p>Все заявки оператора: {{operator}}</p>
+    <ul>
+        {% for req in requests_list%}
+        <li><a href="/showreq/{{req.id}}">{{req.data}}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+{% endblock %}
+
+
+                <!-- <option >Выберите заявки оператора {{operator}}</option>
+                {% for req in requests %}
+                <option >{{req}}</option>
+                {% endfor %} -->

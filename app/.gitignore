@@ -1,4 +1,6 @@
 .env
-/venvSovkombank
-/_pycache__
-/app/__pycache__
+/venvSovkombank/
+/_pycache__/
+/app/__pycache__/
+*.pyc
+/database/

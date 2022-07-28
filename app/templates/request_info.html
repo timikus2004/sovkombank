@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="flash">{{msg}}</div>
+{% endfor %}
+<p><a href="{{ url_for('index')}}">Вернуться на главную страницу</a></p>
+
+
+<div class="info_main">
+    <div class="info_container">
+        <div class="box">{{id}}</div>
+        
+    </div>
+</div>
+
+{% endblock %}

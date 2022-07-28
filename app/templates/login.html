@@ -1,21 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
-{{ super()}}
-{% for msg in get_flashed_messages(True) %}
-<div class="flash">{{msg}}</div>
-{% endfor %}
-<div class="login_parent">
-    <div class="login_child">
-        <form action="/login" method="POST">
-            <p><label>Введите имя: </label><input type="text" name="username" value="" required />
-            <p><label>Введите пароль: </label><input type="text" name="password" value="" required />
-            <p><input type="submit" value="Отправить"/>
-            <p><a href="{{url_for('register')}}"> Регистрация</a></p>
-            <p><a href="{{ url_for('index')}}">Вернуться на главную страницу</a></p>
-        </form>      
-    </div>
+
+
+<div class="login_container">
+    <form class="form" action="/login" method="POST">
+        <p><label>Введите имя: </label><input type="text" name="username" value="" required />
+        <p><label>Введите пароль: </label><input type="text" name="password" value="" required />
+        <p><input type="submit" class="btn_login" value="Отправить"/>
+        <p><a class="url_link" href="{{url_for('register')}}"> Регистрация</a></p>
+        <p><a class="url_link" href="{{ url_for('index')}}">Главная страница</a></p>
+    </form>      
 </div>
+
 
     
 {% endblock %}
